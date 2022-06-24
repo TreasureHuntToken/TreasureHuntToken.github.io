@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Treasure Hunt</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+
+        <script src="res/bootstrap.bundle.min.js"></script>
+        <script src="res/jquery-3.6.0.min.js"></script>
+        <script src="res/sweetalert2.all.min.js"></script>
+
+        <script src="res/nacl-util.min.js"></script>
+        <script src="res/nacl-fast.min.js"></script>
+
+        <link rel="stylesheet" href="res/bootstrap.min.css" />
+        <link rel="stylesheet" href="res/styles.css" />
+
+    </head>
+    <body onload="setup_load(true)">
+
+        <div class="parchment container inner_container"></div>
+
+        <!-- nav -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    TreasureHunt
+                    <span class="badge rounded-pill bg-info"
+                        style="font-size: 12pt; background-color: rgba(var(--bs-info-rgb), 0.7) !important;">Beta</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="top.html">Top Puzzles</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="solved.html">Recently-Solved Puzzles</a>
+                        </li>
+                            
+                        <span style="visibility: hidden;">--</span>
+                        <a type="button" class="btn btn-outline-success" href="create.html">Create Puzzle</a>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <select class="form-select" 
+                            style="background-color: rgb(20, 20, 20); color: white;" id="currencySelect">
+                            <option value="BNB">BNB</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-left: 10pt !important;">
+                        <a href="#" onclick="login_logout();">
+                            <li class="nav-item">
+                                <span class="badge rounded-pill bg-primary text-light" style="font-size: 14pt; border: 2px solid white;">
+                                    <span id="user_addr">Log in</span>
+                                    <!--<span style="visibility: hidden;">.</span>
+                                        <img src="https://via.placeholder.com/150" style="height: 16pt; width: 16pt; margin-bottom: 1pt;" />-->
+                                </span>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- nav -->
+
+        <div class="container inner_container" style="padding-top: 12pt;" id="loginContainer" style="display: none">
+            <form class="row g-2" id="formMustLogin" action="javascript:void(0);">
+                <button onclick="login();" class="btn btn-primary mb-3">Must be logged in to see puzzles</button>
+            </form>
+        </div>
+
+        <div class="container inner_container" style="padding-top: 12pt;" id="puzzleContainer">
+            <h2 style="padding-bottom: 10pt;"><b>Recently-Solved Puzzles</b></h2>
+
+            <span id="noPuzzles">There are currently no solved puzzles</span>
+
+            <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 g-4" id="puzzleDiv">
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <script src="local_config.js"></script>
+        <script src="script.js"></script>
+        <script src="list_puzzles.js"></script>
+    </body>
+
+    <svg style="position: absolute; top: -500px; left: 0; z-index: -999;">
+        <filter id="svg_paper">
+            <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="20" />
+        </filter>
+    </svg>
+</html>

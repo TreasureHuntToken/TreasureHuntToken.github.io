@@ -20,7 +20,7 @@
 
 
     </head>
-    <body onload="load_puzzle()">
+    <body onload="load_hunt()">
 
         <div class="parchment container inner_container"></div>
 
@@ -39,15 +39,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="top.html">Top Puzzles</a>
+                            <a class="nav-link" aria-current="page" href="top.html">Unsolved Hunts</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="solved.html">Recently-Solved Puzzles</a>
+                            <a class="nav-link" aria-current="page" href="solved.html">Solved Hunts</a>
                         </li>
                             
                         <span style="visibility: hidden;">--</span>
-                        <a type="button" class="btn btn-outline-success" href="create.html">Create Puzzle</a>
+                        <a type="button" class="btn btn-outline-success" href="create.html">Create Hunt</a>
                     </ul>
 
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -75,8 +75,8 @@
         <!-- nav -->
 
         <div class="container inner_container" style="padding-top: 12pt;">
-            <h2 style="padding-bottom: 3pt;"><b id="puzzleTitle"></b></h2>
-            <h5 style="padding-bottom: 10pt;"><span id="puzzleSubtitle"></span></h5>
+            <h2 style="padding-bottom: 3pt;"><b id="huntTitle"></b></h2>
+            <h5 style="padding-bottom: 10pt;"><span id="huntSubtitle"></span></h5>
 
             <div class="row" id="spinnerSection">
                 <div class="d-flex justify-content-center">
@@ -84,25 +84,25 @@
                 </div>
             </div>
 
-            <div class="row" id="puzzleSection" style="display: none;">
+            <div class="row" id="huntSection" style="display: none;">
                 <div class="col-md-3">
-                    <img id="puzzleArt" src="#" style="width: 90%; height: 0">
+                    <img id="huntArt" src="#" style="width: 90%; height: 0">
                     <br><br>
-                    <p style="font-size: 15pt" id="rewardWrap">Reward: <b><span id="puzzleReward"></span></b></p>
+                    <p style="font-size: 15pt" id="rewardWrap">Reward: <b><span id="huntReward"></span></b></p>
                     <a id="rewardLink" href="#" target="_blank">See reward on block explorer<br><br></a>
-                    <p id="alreadySolved" style="display: none; color: rgb(220, 0, 0);"><b>This puzzle has already been solved. You may still enter a solution to check it, but there is no reward.</b></p>
+                    <p id="alreadySolved" style="display: none; color: rgb(220, 0, 0);"><b>This hunt has already been solved. You may still enter a solution to check it, but there is no reward.</b></p>
                     <p id="solvedBy" style="display: none;"></p>
-                    <a id="historyLink" href="#" onclick="show_sponsors_table()">See puzzle history</a>
+                    <a id="historyLink" href="#" onclick="show_sponsors_table()">See hunt history</a>
                     <br>
                     <br>
-                    <button onclick="sponsor();" id="sponsor" class="btn btn-success">Sponsor this puzzle</button>
+                    <button onclick="sponsor();" id="sponsor" class="btn btn-success">Sponsor this hunt</button>
 
                     <br><br><br>
                 </div>
 
                 <div class="col-md-9">
                     <div id="successSection" style="display: none;">
-                        <h3><b>Congratulations! You have solved the puzzle.</b></h3>
+                        <h3><b>Congratulations! You have solved the hunt.</b></h3>
                         <p>Your reward is being dispensed</p>
                         <p id="dispenseReward" style="font-weight: bold;">Please do not close this page</p>
 
@@ -111,14 +111,14 @@
 						<br>
                     </div>
 
-                    <div id="innerPuzzleSection">
-                        <p id="puzzleDesc"></p>
+                    <div id="innerHuntSection">
+                        <p id="huntDesc"></p>
 
                         <a id="graphicLink" href="#" target="_blank">
-                            <img id="puzzleGraphic" src="#" style="width: 100%; height: 0">
+                            <img id="huntGraphic" src="#" style="width: 100%; height: 0">
                         </a>
                         <br><br>
-                        <p><b>Solve the puzzle:</b></p>
+                        <p><b>Solve the hunt:</b></p>
 
                         <form class="row g-2" id="formMustLogin" style="display: none;" action="javascript:void(0);">
                             <button onclick="login();" class="btn btn-primary mb-3">Must be logged in to solve</button>

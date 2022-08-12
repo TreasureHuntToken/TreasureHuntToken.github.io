@@ -81,7 +81,7 @@
             </form>
 
 
-            <form id="formCreateHunt" class="form-semiclear" action="javascript:void(0);">
+            <form id="formCreatePuzzle" class="form-semiclear" action="javascript:void(0);">
                 <div class="mb-3">
                     <label class="form-label" style="font-weight: bold">Hunt Title (max 60 characters)</label>
                     <input class="form-control" type="text" id="title">
@@ -89,7 +89,7 @@
 
                 <div class="mb-3">
                     <label class="form-label" style="font-weight: bold">Hunt Art for preview and NFT (recommended resolution 600x400)</label>
-                    <input class="form-control" type="file" id="huntArt">
+                    <input class="form-control" type="file" id="puzzleArt">
                 </div>
 
                 <div class="mb-3">
@@ -99,7 +99,7 @@
 
                 <div class="mb-3">
                     <label class="form-label" style="font-weight: bold">Hunt Graphic (this can be part of the actual hunt)</label>
-                    <input class="form-control" type="file" id="huntGraphic">
+                    <input class="form-control" type="file" id="puzzleGraphic">
                 </div>
 
                 <div class="mb-3">
@@ -114,7 +114,7 @@
 
                 <div class="mb-3">
                     <label class="form-label" style="font-weight: bold">Hunt Reward (BNB)</label>
-                    <input class="form-control" type="text" id="huntReward">
+                    <input class="form-control" type="text" id="puzzleReward">
                 </div>
 
                 <div class="mb-3">
@@ -123,14 +123,14 @@
                         (Note: hunts will always be visible when logged in as the hunt creator)
                     </label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="huntVisibility" value="public" checked>
+                        <input class="form-check-input" type="radio" name="puzzleVisibility" value="public" checked>
                         <label class="form-check-label" for="flexRadioDefault1">
                             Public (visible on "Unsolved Hunts" page)
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="huntVisibility" value="unlisted">
+                        <input class="form-check-input" type="radio" name="puzzleVisibility" value="unlisted">
                         <label class="form-check-label" for="flexRadioDefault1">
                             Unlisted (can be shared using the link)
                         </label>
@@ -138,7 +138,7 @@
                 </div>
                 <br>
 
-                <a href="#" onclick="create_hunt();" class="btn btn-primary mb-3">Create Hunt</a>
+                <a href="#" onclick="create_puzzle();" class="btn btn-primary mb-3">Create Hunt</a>
                 <br>
                 <br>
                 <br>

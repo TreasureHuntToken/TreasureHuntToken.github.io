@@ -38,15 +38,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="top.html">Unsolved Hunts</a>
+                            <a class="nav-link" aria-current="page" href="top.html">Top Puzzles</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="solved.html">Solved Hunts</a>
+                            <a class="nav-link" aria-current="page" href="solved.html">Recently-Solved Puzzles</a>
                         </li>
 
                         <span style="visibility: hidden;">--</span>
-                        <a type="button" class="btn btn-outline-success" href="create.html">Create Hunt</a>
+                        <a type="button" class="btn btn-outline-success" href="create.html">Create Puzzle</a>
                     </ul>
 
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -74,58 +74,58 @@
         <!-- nav -->
 
         <div class="container inner_container" style="padding-top: 12pt;">
-            <h2 style="padding-bottom: 10pt;"><b>Create a Hunt</b></h2>
+            <h2 style="padding-bottom: 10pt;"><b>Create a Puzzle</b></h2>
 
             <form class="row g-2" id="formMustLogin" style="display: none;" action="javascript:void(0);">
-                <a href="#" onclick="login();" class="btn btn-primary mb-3">Must be logged in to create a hunt</a>
+                <a href="#" onclick="login();" class="btn btn-primary mb-3">Must be logged in to create a puzzle</a>
             </form>
 
 
             <form id="formCreatePuzzle" class="form-semiclear" action="javascript:void(0);">
                 <div class="mb-3">
-                    <label class="form-label" style="font-weight: bold">Hunt Title (max 60 characters)</label>
+                    <label class="form-label" style="font-weight: bold">Puzzle Title (max 60 characters)</label>
                     <input class="form-control" type="text" id="title">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label" style="font-weight: bold">Hunt Art for preview and NFT (recommended resolution 600x400)</label>
+                    <label class="form-label" style="font-weight: bold">Puzzle Art for preview and NFT (recommended resolution 600x400)</label>
                     <input class="form-control" type="file" id="puzzleArt">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label" style="font-weight: bold">Hunt Text</label>
+                    <label class="form-label" style="font-weight: bold">Puzzle Text</label>
                     <textarea class="form-control" type="text" id="desc" rows="4"> </textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label" style="font-weight: bold">Hunt Graphic (this can be part of the actual hunt)</label>
+                    <label class="form-label" style="font-weight: bold">Puzzle Graphic (this can be part of the actual puzzle)</label>
                     <input class="form-control" type="file" id="puzzleGraphic">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label" style="font-weight: bold">Hunt Solution (case-sensitive)</label>
+                    <label class="form-label" style="font-weight: bold">Puzzle Solution (case-sensitive)</label>
                     <input class="form-control" type="text" id="soln">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label" style="font-weight: bold">Hunt Creator (40 char max)</label>
+                    <label class="form-label" style="font-weight: bold">Puzzle Creator (40 char max)</label>
                     <input class="form-control" type="text" id="creator">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label" style="font-weight: bold">Hunt Reward (BNB)</label>
+                    <label class="form-label" style="font-weight: bold">Puzzle Reward (BNB)</label>
                     <input class="form-control" type="text" id="puzzleReward">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">
-                        <span style="font-weight: bold">Hunt Visibility</span>
-                        (Note: hunts will always be visible when logged in as the hunt creator)
+                        <span style="font-weight: bold">Puzzle Visibility</span>
+                        (Note: puzzles will always be visible when logged in as the puzzle creator)
                     </label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="puzzleVisibility" value="public" checked>
                         <label class="form-check-label" for="flexRadioDefault1">
-                            Public (visible on "Unsolved Hunts" page)
+                            Public (visible on "Top Puzzles" page)
                         </label>
                     </div>
 
@@ -138,7 +138,7 @@
                 </div>
                 <br>
 
-                <a href="#" onclick="create_puzzle();" class="btn btn-primary mb-3">Create Hunt</a>
+                <a href="#" onclick="create_puzzle();" class="btn btn-primary mb-3">Create Puzzle</a>
                 <br>
                 <br>
                 <br>

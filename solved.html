@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-        <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+        <script src="https://unpkg.com/moralis-v1@1.11.0/dist/moralis.js"></script>
 
         <script src="res/bootstrap.bundle.min.js"></script>
         <script src="res/jquery-3.6.0.min.js"></script>
@@ -38,15 +38,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="top.html">Top Puzzles</a>
+                            <a class="nav-link" aria-current="page" href="top.html">Unsolved Hunts</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="solved.html">Recently-Solved Puzzles</a>
+                            <a class="nav-link active" aria-current="page" href="solved.html">Solved Hunts</a>
                         </li>
                             
                         <span style="visibility: hidden;">--</span>
-                        <a type="button" class="btn btn-outline-success" href="create.html">Create Puzzle</a>
+                        <a type="button" class="btn btn-outline-success" href="create.html">Create Hunt</a>
                     </ul>
 
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -75,16 +75,16 @@
 
         <div class="container inner_container" style="padding-top: 12pt;" id="loginContainer" style="display: none">
             <form class="row g-2" id="formMustLogin" action="javascript:void(0);">
-                <button onclick="login();" class="btn btn-primary mb-3">Must be logged in to see puzzles</button>
+                <button onclick="login();" class="btn btn-primary mb-3">Must be logged in to see hunts</button>
             </form>
         </div>
 
-        <div class="container inner_container" style="padding-top: 12pt;" id="puzzleContainer">
-            <h2 style="padding-bottom: 10pt;"><b>Recently-Solved Puzzles</b></h2>
+        <div class="container inner_container" style="padding-top: 12pt;" id="huntContainer">
+            <h2 style="padding-bottom: 10pt;"><b>Solved Hunts</b></h2>
 
-            <span id="noPuzzles">There are currently no solved puzzles</span>
+            <span id="noHunts">Hunts are loaded daily! Check back again later.</span>
 
-            <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 g-4" id="puzzleDiv">
+            <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 g-4" id="huntDiv">
 
             </div>
 

@@ -1,6 +1,6 @@
 async function update_loggedin(){window.user?($("#loginContainer").css("display","none"),$("#huntContainer").css("display",""),window.cfg&&!window.loaded&&await load_hunts(window.cfg.only_solved)):($("#loginContainer").css("display",""),$("#huntContainer").css("display","none"))}function make_card(e,a,t,o,i,n){return o=escape_text(o),e=""+parseInt(e),a.startsWith("https://ipfs.moralis.io")?`
         <div class="col">
-            <div class="card grow clickable card-semiclear" onclick="window.location.href = 'hunt.html?id=${e}';">
+            <div class="card grow clickable card-semiclear" onclick="window.location.href = 'puzzle.html?id=${e}';">
                 <img src="${a}" style="width: 100%; aspect-ratio: 1.5; object-fit: contain;" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight: bold;">${t=escape_text(t)}</h5>

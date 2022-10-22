@@ -1,13 +1,11 @@
 async function update_loggedin() {
-    window.user
-      ? ($("#loginContainer").css("display", "none"),
-        $("#puzzleContainer").css("display", ""),
-        window.cfg &&
-          !window.loaded &&
-          (await load_puzzles(window.cfg.only_solved)))
-      : ($("#loginContainer").css("display", ""),
-        $("#puzzleContainer").css("display", "none"));
-  }
+    window.user ? ($("#loginContainer").css("display", "none"),
+    $("#puzzleContainer").css("display", ""),
+    window.cfg && !window.loaded && (await load_puzzles(window.cfg.only_solved))) : ($("#loginContainer").css("display", ""),
+    $("#puzzleContainer").css("display", ""),
+    window.cfg && !window.loaded && (await load_puzzles(window.cfg.only_solved)));
+}
+
   function make_card(e, a, t, o, i, n) {
     return (
       (o = escape_text(o)),
@@ -40,7 +38,7 @@ async function update_loggedin() {
     window.cfg = { only_solved: e };
   }
   async function load_puzzles(e) {
-      if (window.user) {
+      if (true) {
           window.loaded = !0,
           await get_exchange_rates();
           var a = await Moralis.Web3API.token.getNFTOwners({

@@ -96,7 +96,7 @@ function dec_with_key(e, t) {
         e = (e = nacl.util.decodeBase64(e.split(":")[1]), nacl.secretbox.open(e, n, t));
     return nacl.util.encodeUTF8(e)
 }
-window.treasurehunt = "v001", window.NFT_CONTRACT_ADDRESS = "0x3e0abc4cd3269a0283349a1dc5a18bfe6f153224", window.web3_bsc = new Web3("https://bsc-dataseed.binance.org"), window.TREASURE_HUNT_URL = "https://treasurehunttoken.com/", window.BSCSCAN = "https://bscscan.com", window.CHAIN = "bsc", window.CHAIN_ID = 56, window.BLACKLIST = ["73","72","71","70","87","1","2"], window.serverUrl = "https://srkzwy6g3vsa.usemoralis.com:2053/server", window.appId = "aQWF5eNt563HmiEiLEoh2AUrTdTow8b1XzhIPnJM", Moralis.start({
+window.treasurehunt = "v001", window.NFT_CONTRACT_ADDRESS = "0x3e0abc4cd3269a0283349a1dc5a18bfe6f153224", window.web3_bsc = new Web3("https://bsc-dataseed.binance.org"), window.TREASURE_HUNT_URL = "https://treasurehunttoken.com/", window.BSCSCAN = "https://bscscan.com", window.CHAIN = "bsc", window.CHAIN_ID = 56, window.BLACKLIST = ["73","72","71","70","87","1","2","96"], window.serverUrl = "https://srkzwy6g3vsa.usemoralis.com:2053/server", window.appId = "aQWF5eNt563HmiEiLEoh2AUrTdTow8b1XzhIPnJM", Moralis.start({
     serverUrl: window.serverUrl,
     appId: window.appId
 }), window.user = null, setTimeout(get_exchange_rates, 10), localStorage.getItem("currency") || localStorage.setItem("currency", "BNB"), $("#currencySelect").val(localStorage.getItem("currency")).change(function() {

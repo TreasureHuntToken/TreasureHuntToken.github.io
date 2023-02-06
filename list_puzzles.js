@@ -43,7 +43,8 @@ async function update_loggedin() {
           await get_exchange_rates();
           var a = await Moralis.Web3API.token.getNFTOwners({
               chain: window.CHAIN,
-              address: window.NFT_CONTRACT_ADDRESS
+              address: window.NFT_CONTRACT_ADDRESS,
+              disable_total: false
           })
             , t = [];
           console.log(a);
